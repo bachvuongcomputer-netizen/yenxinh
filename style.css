@@ -1,1 +1,165 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
+body{
+
+height:100vh;
+
+overflow:hidden;
+
+background:linear-gradient(
+180deg,
+#020111 0%,
+#061539 40%,
+#102b5f 70%,
+#ffb6c1 100%
+);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+/* Bầu trời sao */
+
+#stars{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+top:0;
+
+left:0;
+
+background-image:
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(white 2px,transparent 2px),
+radial-gradient(#ffe9a9 2px,transparent 2px);
+
+background-size:
+90px 90px,
+180px 180px,
+260px 260px;
+
+animation:stars 80s linear infinite;
+
+opacity:.9;
+
+}
+
+@keyframes stars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+
+transform:translateY(-400px);
+
+}
+
+}
+
+/* Khung kính */
+
+#intro,
+#letter{
+
+position:absolute;
+
+width:700px;
+
+max-width:90%;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+padding:45px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 15px 45px rgba(0,0,0,.4);
+
+color:white;
+
+transition:.8s;
+
+}
+
+#letter{
+
+display:none;
+
+}
+
+h1{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+h2{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin-top:15px;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4f86;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+background:#ff2568;
+
+}
