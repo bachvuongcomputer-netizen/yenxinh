@@ -1,12 +1,14 @@
+const btn=document.getElementById("openBtn");
+
+const cover=document.querySelector(".cover");
+
 const envelope=document.getElementById("envelope");
 
 const message=document.getElementById("message");
 
-const cover=document.querySelector(".cover");
+btn.onclick=function(){
 
-document.getElementById("openBtn").onclick=function(){
-
-cover.style.transform="rotateX(180deg)";
+cover.classList.add("open");
 
 setTimeout(()=>{
 
